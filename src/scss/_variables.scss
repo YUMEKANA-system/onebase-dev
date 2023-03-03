@@ -1,0 +1,28 @@
+$GNaviHight:60px;
+$ContentsWidth:1024px;
+
+//map
+$Width:(
+    contents:1024px,
+    sideArea:300px
+);
+
+$height:(
+    name1:100px,
+    name2:200px,
+    name3:300px
+    );
+
+/*
+利用方法
+width:map-get($width,contents);
+*/
+
+$path:(
+    img:"/img/"
+)
+
+/*
+利用方法
+background:url("#{map-get($path,img)}header_001.png")no-repeat center;
+*/

@@ -45,11 +45,12 @@ module.exports = () =>
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: `./css/${outputFile}.css`,
+        filename: `css/${outputFile}.css`,
       }),
+      //login
       new HtmlWebpackPlugin({
-        template: './src/tmp/index.pug',
-        filename: 'index.html',
+        template: './src/tmp/login/index.pug',
+        filename: 'login/index.php',
         chunks: ['main'],
         //inject:'body' //読み込み箇所の設定
       }),
@@ -62,6 +63,11 @@ module.exports = () =>
         template: './src/tmp/members/taro.pug',
         filename: 'members/taro.html',
         chunks: ['main'],
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/tmp/sub.pug',
+        filename: 'member/sub.html',
+        chunks: ['sub'],
       }),
       new HtmlWebpackPlugin({
         template: './src/tmp/sub.pug',

@@ -8,7 +8,7 @@ module.exports = ({ outputFile, assetFile }) => ({
     main: './src/js/main.js',
     sub: './src/js/sub.js',
     secondStyle: './src/scss/main.scss',
-    thirdStyle: './src/scss/footer.scss',
+    thirdStyle: './src/scss/example.scss',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

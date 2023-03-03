@@ -1,13 +1,21 @@
 doctype html
 
 block locals
-  - var title = '夢を叶える百貨店';
+  - var title = '-dev- 夢を叶える百貨店';
 
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title #{title}
+    link(rel="canonical", href="https://onecollege.co.jp")
+    meta(http-equiv="content-type", content="text/html; charset=utf-8")
+    meta(http-equiv="content-style-type", content="text/css")
+    meta(http-equiv="content-script-type", content="text/javascript")
+    meta(name="viewport", content="width=device-width,initial-scale=1.0,maximum-scale=1.0")
+    meta(property="og:url", content="https://www.#{tld}/")
+    meta(property="og:title", content="(開発)夢を叶える百貨店")
+    meta(property="og:description", content="日本全国から出品される商品・サービスのオンラインマーケットプレイスです。")
+    meta(property="og:site_name", content="オンラインマーケットプレイス")
+
   body
     include _menu.pug
     block content

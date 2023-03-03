@@ -1,0 +1,74 @@
+@mixin clearfix {
+    &::after {
+        content:"";
+        display:block;
+        clear:both;
+    }
+}
+
+@mixin set-margin($direction, $value) {
+    margin-#{$direction}: $value;
+  }
+
+/*
+利用方法
+.content {
+  .title {
+    font-size: 2rem;
+    font-size: 2rem;
+    color: $primary-color;
+  }
+  .title-lg {
+    @extend .title;
+    font-size: 3rem;
+  }
+  @include set-margin(right, 16px);
+}
+*/
+
+@mixin textShadow ($color:#000,$alpha:0.5){
+    text-shadow:1px 1px 2px rgba($color,$alpha);
+}
+
+/*
+利用方法
+@include textShadow(#fff, 1);
+*/
+
+@mixin linkArrow($side:"right",$color:#ccc) {
+    @if ($side != "right" and $side == "left"){
+        @warn "引数は「right」か「left」を入力してください。"
+    }
+
+    position:relative;
+    @if($side == "right"){
+        padding-right: 20px;
+    } @else if ($side == "left"){
+        padding-left:20px;
+    }
+
+    &::after {
+        content:"";
+        display: block;
+        width:5px;
+        height:5px;
+        position: absolute;
+        top: 50%;
+        @if($side == "right"){
+            right: 10px;
+        } @else if ($side == "left"){
+            left:10px;
+        }
+        margin-top:-2.5px;
+        border-top:1px solid $color;
+        border-right:1px solid $color;
+        transform:rotate(45deg);
+    }
+}
+
+/*
+利用方法
+li {
+    @include linkArrow("right");
+}
+*/

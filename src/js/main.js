@@ -2,6 +2,8 @@ import 'js/reactApp.jsx';
 import '@scss/main';
 import { add } from 'js/utils/math';
 import { greet } from 'js/utils/greet';
+
+
 setTimeout(() => {
   import('js/sub');
 }, 2000);

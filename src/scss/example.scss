@@ -1,0 +1,35 @@
+/*BEM　記述方法　推奨例
+.GlobalPrimaryNav__MenuItem--active {}
+*/
+
+body {
+  color: aqua;
+  user-select: none;
+  margin: 10px 20px 10px 20px;
+}
+
+.entrance_regist_p {
+  color:red!important;
+}
+
+$primary-color: orange;
+
+.content {
+  .title {
+    font-size: 2rem;
+    font-size: 2rem;
+    color: $primary-color;
+  }
+  .title-lg {
+    @extend .title;
+    font-size: 3rem;
+  }
+}
+
+h1 {
+  background-image: url('~@img/kv.jpg');
+}
+
+.footer {
+  background-color: #ddd;
+}
