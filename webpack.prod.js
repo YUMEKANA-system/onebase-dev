@@ -55,20 +55,10 @@ module.exports = () =>
         chunks: ['main'],
         //inject:'body' //読み込み箇所の設定
       }),
-      new HtmlWebpackPlugin({
-        template: './src/tmp/second.pug',
-        filename: 'second.html',
-        chunks: ['main'],
-      }),
-      new HtmlWebpackPlugin({
-        template: './src/tmp/members/taro.pug',
-        filename: 'members/taro.html',
-        chunks: ['main'],
-      }),
-      new HtmlWebpackPlugin({
-        template: './src/tmp/sub.pug',
-        filename: 'member/sub.html',
-        chunks: ['sub'],
-      }),
+      // new HtmlWebpackPlugin({
+      //   template: './src/tmp/sub.pug',
+      //   filename: 'member/sub.html',
+      //   chunks: ['sub'],
+      // }),
     ],
   });

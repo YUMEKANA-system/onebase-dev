@@ -1,0 +1,367 @@
+@charset "UTF-8";
+/*マップ
+width:map-get($width,contents);
+*/
+/*
+background:url("/img/header_001.png")no-repeat center;
+*/
+/*
+@include media ("tb") {
+    width:100%;
+}
+*/
+/*
+ベース幅を追加
+@include baseWidth(600px);
+*/
+/*
+ベースマージンを追加
+@include baseMargin;
+*/
+/*ボタンを作成する
+.my-submit-button {
+  @include submit-button(#007bff, #fff);
+}
+*/
+/*
+input
+@include input-text;
+*/
+/*
+googleFont-Fredericka
+@include googleFont-Fredericka;
+*/
+/*
+バックグラウンドカラーを追加
+@include backGroundColor(#fff, 1);
+テキストシャドウを追加
+@include textShadow(#fff, 1);
+ボックスシャドウを追加
+@include boxShadow(#ac984e, 1);
+*/
+/*arrowを追加する
+li {
+    @include linkArrow("right");
+}
+*/
+/*リップルエフェクト*/
+/*グラデーションを生成する
+.gradient-box {
+    @include gradient(#f0f, #0ff);
+  }
+*/
+/*フレキシブルボックスを作成する
+.flex-container {
+  @include flexbox(column, space-around, center);
+}
+*/
+/*ページ全体を覆うモーダルを作成する
+.modal {
+  @include cover();
+}
+*/
+/*テキストのトランスフォームを作成する
+.text-uppercase {
+  @include text-transform(uppercase);
+}
+*/
+#login .login {
+  width: 600px;
+  height: auto;
+  margin: 60px auto 90px;
+  box-shadow: 0px 0px 10px rgba(172, 152, 78, 0.4);
+  border-radius: 6px;
+  padding: 60px 50px;
+  background-color: white;
+}
+@media only screen and (max-width:567px) {
+  #login .login {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:567px) {
+  #login .login {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width:567px) {
+  #login .login {
+    padding: 40px 4% 0;
+    height: 100vh;
+  }
+}
+#login .login__heading {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2;
+  margin: 0 auto;
+  color: #232323;
+}
+#login .login__heading-logo {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Fredericka the Great", cursive;
+  display: inline-block;
+  padding-bottom: 14px;
+  color: #232323;
+}
+#login .login__inputs {
+  width: 350px;
+  margin: 0 auto;
+}
+@media only screen and (max-width:567px) {
+  #login .login__inputs {
+    width: 100%;
+  }
+}
+#login .login__inputs form {
+  margin: 0;
+  width: 100%;
+}
+#login .login__inputs-mail {
+  margin: 30px auto 0;
+  width: 100%;
+}
+#login .login__inputs-mail .input-title {
+  font-size: 12px;
+  color: #677e98;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#login .login__inputs-mail input[type=text] {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border: 0.5px solid #b5b5b6;
+  background-color: #fff;
+  border-radius: 3px;
+  outline: none;
+  padding: 10px;
+}
+#login .login__inputs-mail input[type=text]:hover {
+  opacity: 0.9;
+}
+@media only screen and (max-width:567px) {
+  #login .login__inputs-mail input[type=text] {
+    height: 46px;
+    line-height: 46px;
+  }
+}
+#login .login__inputs-password {
+  margin: 20px auto 0;
+  width: 100%;
+}
+#login .login__inputs-password .input-password {
+  font-size: 12px;
+  color: #677e98;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#login .login__inputs-password input[type=password] {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border: 0.5px solid #b5b5b6;
+  background-color: #fff;
+  border-radius: 3px;
+  outline: none;
+  padding: 10px;
+}
+#login .login__inputs-password input[type=password]:hover {
+  opacity: 0.9;
+}
+@media only screen and (max-width:567px) {
+  #login .login__inputs-password input[type=password] {
+    height: 46px;
+    line-height: 46px;
+  }
+}
+#login .login__inputs-password .input-recovery {
+  font-size: 12px;
+  color: #677e98;
+  margin-bottom: 5px;
+}
+#login .login__inputs-password .input-recovery a {
+  font-size: 10px;
+}
+#login .login__inputs-login {
+  margin: 30px auto 0;
+  width: 100%;
+}
+#login .login__inputs-login input[type=submit] {
+  color: #fff;
+  background-color: #93bace;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: normal;
+  width: 350px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  filter: drop-shadow(0px 3px 2px rgba(98, 125, 130, 0.4));
+  border-radius: 3px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+#login .login__inputs-login input[type=submit]:hover {
+  background-color: #b6d0de;
+}
+#login .login__inputs-login input[type=submit]:active {
+  background-color: #70a4be;
+}
+@media only screen and (max-width:1199px) {
+  #login .login__inputs-login input[type=submit] {
+    width: 350px;
+  }
+}
+@media only screen and (max-width:991px) {
+  #login .login__inputs-login input[type=submit] {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:767px) {
+  #login .login__inputs-login input[type=submit] {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:567px) {
+  #login .login__inputs-login input[type=submit] {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+  }
+}
+#login .login__inputs-login .input-keep {
+  font-size: 14px;
+  color: #595757;
+}
+#login .login__inputs-login .input-keep input[type=checkbox] {
+  margin-right: 8px;
+}
+#login .login__inputs-login .input-keep p.login_keep label {
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+}
+#login .login__inputs-login .input-recovery {
+  font-size: 12px;
+  color: #677e98;
+  margin-bottom: 5px;
+}
+#login .login__inputs-login .input-recovery a {
+  font-size: 10px;
+}
+#login .login__links {
+  margin-top: 50px;
+}
+#login .login__links .is-member {
+  font-size: 13px;
+  color: #595757;
+  width: 100%;
+  text-align: center;
+}
+#login .login__links a {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #677e98;
+}
+
+.mt0px {
+  margin-top: 0px;
+}
+
+.mb0px {
+  margin-bottom: 0px;
+}
+
+.pt0px {
+  padding-top: 0px;
+}
+
+.pb0px {
+  padding-bottom: 0px;
+}
+
+.mt10px {
+  margin-top: 10px;
+}
+
+.mb10px {
+  margin-bottom: 10px;
+}
+
+.pt10px {
+  padding-top: 10px;
+}
+
+.pb10px {
+  padding-bottom: 10px;
+}
+
+.mt20px {
+  margin-top: 20px;
+}
+
+.mb20px {
+  margin-bottom: 20px;
+}
+
+.pt20px {
+  padding-top: 20px;
+}
+
+.pb20px {
+  padding-bottom: 20px;
+}
+
+.mt30px {
+  margin-top: 30px;
+}
+
+.mb30px {
+  margin-bottom: 30px;
+}
+
+.pt30px {
+  padding-top: 30px;
+}
+
+.pb30px {
+  padding-bottom: 30px;
+}
+
+.mt40px {
+  margin-top: 40px;
+}
+
+.mb40px {
+  margin-bottom: 40px;
+}
+
+.pt40px {
+  padding-top: 40px;
+}
+
+.pb40px {
+  padding-bottom: 40px;
+}
+
+.mt50px {
+  margin-top: 50px;
+}
+
+.mb50px {
+  margin-bottom: 50px;
+}
+
+.pt50px {
+  padding-top: 50px;
+}
+
+.pb50px {
+  padding-bottom: 50px;
+}

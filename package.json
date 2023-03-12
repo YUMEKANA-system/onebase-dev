@@ -7,9 +7,11 @@
     "lint": "eslint src/js --fix",
     "start": "npx webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "build:dev": "npm run lint && webpack --config webpack.dev.js"
+    "build:dev": "npm run lint && webpack --config webpack.dev.js",
+    "gulp:dev": "gulp",
+    "gulp:build": "gulp build"
   },
-  "repository": {
+    "repository": {
     "type": "git",
     "url": "git+https://github.com/YUMEKANA-system/onebase-dev.git"
   },
@@ -34,17 +36,18 @@
     "css-mqpacker": "^7.0.0",
     "cssnano": "^5.1.15",
     "eslint": "^8.34.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "image-webpack-loader": "^8.1.0",
     "mini-css-extract-plugin": "^2.7.2",
     "postcss-loader": "^7.0.2",
     "pug-html-loader": "^1.1.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "regenerator-runtime": "^0.13.11",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0",
+    "slick-carousel": "^1.8.1",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.6",
     "ts-loader": "^9.4.2",

@@ -1,6 +1,8 @@
 $breakpoint:(
-    sp:"only screen and (max-width:767px)",
-    tb:"only screen and (max-width:767px)"
+    sp-s:"only screen and (max-width:567px)",
+    sp-l:"only screen and (max-width:767px)",
+    tb-s:"only screen and (max-width:991px)",
+    tb-l:"only screen and (max-width:1199px)"
 );
 
 @mixin media ($device) {
@@ -8,3 +10,9 @@ $breakpoint:(
         @content;
     }
 }
+
+/*
+@include media ("tb") {
+    width:100%;
+}
+*/

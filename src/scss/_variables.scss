@@ -1,28 +1,77 @@
-$GNaviHight:60px;
-$ContentsWidth:1024px;
+//カラーコード
+$primary-color: #232323;
+$secondary-color: #595757;
+$success-color: #106f51;
+$danger-color: #c8161d;
+$info-color: #677e98;
+$theme-color: #ac984e;
+$themeLight-color: #f6f1ea;
 
-//map
+$next-btn-color: #79698a; // 進むボタンの色（青）
+$prev-btn-color: #b0a6bb; // 戻るボタンの色（灰）
+$submit-btn-color: #106f51; // 決定ボタンの色（緑）
+$cancel-btn-color: #b0a6bb; // キャンセルボタンの色（赤）
+$share-btn-color: #93bace; // シェアボタンの色（青）
+$login-btn-color: #93bace; // ログインボタンの色（青）
+
+//フォントサイズ
+$base-font-size: 16px;
+$M-font-size: 14px;
+$S-font-size: 12px;
+$SS-font-size: 10px;
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$p-font-size: 1rem;
+
+//幅
+$container-large-width: 1200px;
+$container-width: 960px;
+$content-large-width: 800px;
+$content-width: 600px;
+$sidebar-width: 300px;
+
+$button-width: 100px;
+$button-height: 40px;
+
+$header-height: 80px;
+$footer-height: 60px;
+
+$thumbnail-width: 150px;
+$thumbnail-height: 100px;
+
+//マージン・パディング
+$base-margin: 1rem;
+$small-margin: 0.5rem;
+$large-margin: 2rem;
+$base-padding: 1rem;
+$small-padding: 0.5rem;
+$large-padding: 2rem;
+
+//radius
+$border-radius-s:3px;
+$border-radius-l:6px;
+
+//ボタン高さ
+$btn-height: 40px;
+
+
+
+
 $Width:(
     contents:1024px,
     sideArea:300px
 );
-
-$height:(
-    name1:100px,
-    name2:200px,
-    name3:300px
-    );
-
-/*
-利用方法
+/*マップ
 width:map-get($width,contents);
 */
 
+
+
 $path:(
     img:"/img/"
-)
-
+);
 /*
-利用方法
 background:url("#{map-get($path,img)}header_001.png")no-repeat center;
 */
