@@ -1,0 +1,283 @@
+.index {
+    .slick-track {height: 300px;}
+    .slick-slide img {object-fit: cover;}
+
+    @include media ("tb-l") {
+        .slick-track {height: 250px;}
+    }
+    @include media ("tb-s") {
+        .slick-track {height: 200px;}
+    }
+    @include media ("sp-s") {
+        .slick-track {height: 150px;}
+    }
+
+    &__sns {
+        width: 100%;
+        height: 60px;
+        border-top: solid 4px $themeLight-color;
+        margin-bottom: 5px;
+
+        &-inner {
+            width: 100%;
+            height: 60px;
+            margin: 0 auto;
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include media ("sp-s") {
+                width: 100%;
+                padding: 0 2%;
+                margin: 0 auto;
+            }
+        }
+
+        &-text {
+            color: $theme-color;
+            font-size: 14px;
+            text-align: left;
+
+            @include media ("sp-s") {
+                font-size: 12px;
+                width: 50%;
+            }
+        }
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                color: $theme-color;
+                font-size: $M-font-size;
+                display: block;
+                line-height: 35px;
+                margin-right: 30px;
+            }
+
+            a {
+                color: #FFF;
+                border-radius: 3px;
+                position: relative;
+                display: inline-block;
+                height: 35px;
+                line-height: 35px;
+                width: 150px;
+                text-align: center;
+                font-size: $base-font-size;
+                overflow: hidden;
+                text-decoration: none;
+                background: #00B900;
+
+                @include media ("sp-s") {
+                    width: 140px;
+                }
+
+                &:hover span {
+                    -webkit-transform: rotateX(360deg);
+                    -ms-transform: rotateX(360deg);
+                    transform: rotateX(360deg);
+                }
+
+                .fa-line {
+                    font-size: 24px;
+                    position: relative;
+                    top: 2px;
+                }
+
+                .fa-line:before {
+                    content: "\f3c0";
+                }
+
+                span {
+                    display: inline-block;
+                    position: relative;
+                    transition: .5s;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 36px;
+                    margin-right: 0;
+                }
+            }
+
+        }
+
+    }
+
+    &__floorGuide {
+        @include contentsWidth(1150px,"tb-l");
+        @include contentsMargin(0,90px);
+
+        &-title {
+            color:$primary-color;
+            font-size: 34px;
+            margin: 70px auto 30px;
+            height: 150px;
+            position: relative;
+            text-align: center;
+            @include googleFont-Shippori;
+
+            @include media ("sp-l") {
+                font-size: 30px;
+                margin: 40px auto 0;
+            }
+
+            @include media ("sp-s") {
+                font-size: 26px;
+                margin: 20px auto 0;
+                height:130px;
+            }
+
+            &:before {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                left: 0;
+                margin: auto;
+                font-size: 24px;
+                line-height: 34px;
+                color: #595757;
+                content: "Floor Guide";
+
+                @include media ("sp-l") {
+                    top: 64px;
+                }
+
+                @include media ("sp-s") {
+                    font-size: 20px;
+                    top: 58px;
+                }
+            }
+        }
+
+        &-lists {
+            margin: 10px 25px;
+
+
+            @include media ("sp-s") {
+                margin: 0;
+                padding:0 2%;
+            }
+        }
+
+        &-list:first-child {
+            border-top: solid 1px #ced1d8;
+        }
+
+        &-list {
+            border-bottom: solid 1px #ced1d8;
+            @include menuArrow();
+
+            a {
+                display: flex;
+                justify-content: space-between;
+
+                @include media ("sp-s") {
+                    flex-direction: column;
+                }
+
+                .list-name {
+                    width: 38%;
+                    padding: 20px;
+                    position: relative;
+
+                    @include media ("sp-l") {
+                        padding:10px 2% 10px 0;
+                    }
+
+                    @include media ("sp-s") {
+                        width: 100%;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        top:-6px;
+                        left:-10px;
+                        content:"";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 120px 105px 0 0;
+                        border-color: #f6f1ea transparent transparent transparent;
+                        z-index: -1;
+
+                        @include media ("sp-l") {
+                            border-width: 100px 85px 0 0;
+                        }
+                    }
+
+
+                    span {
+                        width: 48px;
+                        height: 26px;
+                        background-color: #000;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 26px;
+                        font-size: $M-font-size;
+                        display: inline-block;
+                        margin-bottom: 0;
+                    }
+
+                    .mall-color {
+                        background-color: $theme-color;
+                    }
+
+                    h2 {
+                        font-size: 26px;
+                        text-indent: 20px;
+                        color:$primary-color;
+                        margin-bottom: 0;
+                        letter-spacing: 1;
+                        font-weight: normal;
+                        margin-top: 20px;
+                        padding: 0;
+
+                        @include media ("sp-l") {
+                            font-size: 1.4rem;
+                            text-indent: 10px;
+                        }
+                    }
+
+                    p {
+                        font-size: $S-font-size;
+                        text-indent: 20px;
+                        color:$primary-color;
+                        margin: 0 0 30px;
+
+                        @include media ("sp-l") {
+                            text-indent: 10px;
+                        }
+
+                        @include media ("sp-s") {
+                            margin-bottom:10px;
+                        }
+                    }
+                }
+            }
+
+            .list-desc {
+                width: 62%;
+                display: flex;
+                align-items: center;
+                padding-right: 50px;
+
+                @include media ("sp-s") {
+                    width: 100%;
+                    margin-bottom:30px;
+                    padding-right:40px;
+                    padding-left:10px;
+                }
+
+                p {
+                    font-size: $M-font-size;
+                    text-align: left;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

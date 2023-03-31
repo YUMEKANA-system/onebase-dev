@@ -11,7 +11,7 @@ const sassBuild = (done) => {
 };
 
 const watchScss = () => {
-  watch('./src/scss/login/_index.scss', sassBuild);
+  watch('./src/scss/top/_index.scss', sassBuild);
 };
 
 exports.default = series(sassBuild, watchScss);

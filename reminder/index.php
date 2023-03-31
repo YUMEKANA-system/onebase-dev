@@ -1,20 +1,23 @@
 <?include_once("{$_SERVER['DOCUMENT_ROOT']}/inc/head.inc")?>
+<div id="reminder">
+<section class="reminder">
 
-<h3 class="smp_425_on">REMINDER<span>パスワード再発行</span></h3>
-<section class="section_www_reminder">
-	<p class="reminder_p">パスワードの再発行を行います</p>
-	<?=$msg?>
-	<div class="section_www_reminder_form">
+	<img class="reminder__logo" src="/img/common/logo-icon.png" alt="" />
+	<h1 class="reminder__title">パスワード再発行</h1>
+
+	<div class="reminder__inputs">
+		<p class="reminder__inputs-description">登録済みのメールアドレスを入力するとパスワードが送信されます。</p>
+		<?=$msg?>
 		<form action="/reminder/" method="post">
-			<p class="reminder_form_p">登録メールアドレスを入力してください</p>
+			<p class="reminder__inputs-info">登録メールアドレスを入力してください</p>
 			<input id="email" type="text" name="email" value="" placeholder="Email" required />
 			<input type="hidden" name="action" value="1" />
-			<div class="input_yes___buttonstyle">
-				<input type="submit" value="送信" />
-			</div>
+			<input type="submit" value="送信" />
 		</form>
 	</div>
-</section>
-<a href="#" class="return_a" onclick="javascript:window.history.back(-1);return false;"><i class="fas fa-chevron-left"></i>　前の画面に戻る</a>
 
+	<a href="#" class="prev-btn" onclick="javascript:window.history.back(-1);return false;">前の画面に戻る</a>
+
+</section>
+</div>
 <?include_once("{$_SERVER['DOCUMENT_ROOT']}/inc/foot.inc")?>

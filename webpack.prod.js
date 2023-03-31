@@ -50,10 +50,10 @@ module.exports = () =>
         filename: `./css/${outputFile}.css`,
       }),
       new HtmlWebpackPlugin({
-        template: './src/tmp/index.pug',
-        filename: 'index.html',
+        template: './src/tmp/webpack.html',
+        filename: 'inc/webpack.inc',
         chunks: ['main'],
-        //inject:'body' //読み込み箇所の設定
+        inject:'head' ,
       }),
       // new HtmlWebpackPlugin({
       //   template: './src/tmp/sub.pug',

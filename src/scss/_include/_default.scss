@@ -1,0 +1,103 @@
+form {
+    margin: 0;
+    width: 100%;
+}
+
+.--location {
+    background-color: $theme-sub-color !important;
+  }
+
+.prev-btn {
+    font-size: $S-font-size;
+    text-align: center;
+    display: inline-block;
+    color: $secondary-color;
+    @include linkArrow("left",$secondary-color);
+    margin:60px auto;
+}
+
+.material-symbols-outlined {
+    margin-right: 8px;
+    font-size: 28px;
+}
+
+.pankuzuList {
+    margin: 15px auto;
+    padding:0 25px;
+
+    @include media ("sp-s") {
+        padding: 0 2%;
+    }
+
+    span {
+        color:$secondary-color;
+        position: relative;
+        margin-right: 35px;
+        font-size: $S-font-size;
+
+        @include media ("sp-s") {
+            margin-right: 25px;
+        }
+
+        &:first-of-type::before {
+            content: "";
+            right: -32px;
+            top:0;
+            bottom:0;
+            position: absolute;
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-top: 1px solid $secondary-color;
+            border-right: 1px solid $secondary-color;
+            transform: rotate(45deg);
+            margin: auto 0.8rem;
+            flex-shrink: 0;
+
+            @include media ("sp-s") {
+                right: -28px;
+            }
+        }
+    }
+
+    span:last-of-type {
+        margin:0;
+        color:$info-color;
+    }
+}
+
+//display--control
+.smp-menu {
+    display: none;
+}
+
+.ps-s--on {
+    display: none;
+
+    @include media ("sp-s") {
+        display: block;
+    }
+}
+
+.ps-l--off {
+    @include media ("sp-l") {
+        display: none!important;
+    }
+}
+
+
+.pagenavi__num {
+    font-size: 12px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+@include media ("sp-s") {
+    .smp_footer_div {
+        background-color: transparent;
+
+        p {
+            font-size: $SS-font-size;
+        }
+    }
+}

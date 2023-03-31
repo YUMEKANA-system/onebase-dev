@@ -1,0 +1,44 @@
+.detail {
+    @include baseHeight;
+
+    &__article {
+        @include contentsWidth(960px,"tb-s");
+        @include contentsMargin(0,90px);
+        @include contentsPadding(60px,90px,30px);
+
+        &-image {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+            margin: 0 auto 30px;
+
+            img {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &-title {
+            @include h-font-size(1.75rem,1.2rem,70px,40px);
+        }
+
+        &-date {
+            font-size: $M-font-size;
+            color: $info-color;
+            text-align: left;
+        }
+
+        &-contents {
+            margin-top: 20px;
+            font-weight: normal;
+            font-size: $base-font-size;
+            line-height: 1.8;
+            color: $secondary-color;
+        }
+
+        &-url {
+            @include submit-button($next-btn-color, #fff);
+        }
+    }
+}

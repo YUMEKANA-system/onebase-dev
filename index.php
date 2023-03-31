@@ -1,4 +1,7 @@
 <?include_once("{$_SERVER['DOCUMENT_ROOT']}/inc/head.inc")?>
+<div id="notification">
+	<section class="notification">
+
 <link rel="stylesheet" href="/css/top.css" type="text/css" />
 <section class="section_kv">
 	<div id="particles-js"></div>
@@ -25,6 +28,8 @@
 	</div>
 </section>
 
+</section>
+</div>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script type="text/javascript" src="/js/contents.js"></script>
 <?include_once("{$_SERVER['DOCUMENT_ROOT']}/inc/foot.inc")?>

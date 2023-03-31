@@ -1,16 +1,11 @@
 .login {
     @include contentsWidth(600px);
-    height: auto;
-    @include baseMargin;
+    @include baseHeight;
+    @include baseMargin(60px,90px);
+    @include basePadding(60px,50px);
     @include boxShadow(#ac984e, .4);
     border-radius: $border-radius-l;
-    padding: 60px 50px;
     @include backGroundColor(#fff, 1);
-
-    @include media ("sp-s") {
-        padding: 40px 4% 0;
-        height: 100vh;
-      }
 
     &__heading {
         text-align: center;
@@ -32,17 +27,12 @@
         @include contentsWidth(350px);
         margin: 0 auto;
 
-        form {
-            margin: 0;
-            width: 100%;
-        }
-
         &-mail {
             margin: 30px auto 0;
             width: 100%;
 
             .input-title {
-                font-size: 12px;
+                font-size: $S-font-size;
                 color: $info-color;
                 margin-bottom: 5px;
                 font-weight: bold;
@@ -58,7 +48,7 @@
             width: 100%;
 
             .input-password {
-                font-size: 12px;
+                font-size: $S-font-size;
                 color: $info-color;
                 margin-bottom: 5px;
                 font-weight: bold;
@@ -69,7 +59,7 @@
             }
 
             .input-recovery {
-                font-size: 12px;
+                font-size: $S-font-size;
                 color: $info-color;
                 margin-bottom: 5px;
 
@@ -85,6 +75,7 @@
 
             input[type="submit"] {
                 @include submit-button($login-btn-color, #fff);
+                margin-top:40px;
             }
 
             .input-keep {
@@ -96,7 +87,7 @@
                 }
 
                 p.login_keep label {
-                    font-size: 12px;
+                    font-size: $S-font-size;
                     position: relative;
                     top: -2px;
                 }

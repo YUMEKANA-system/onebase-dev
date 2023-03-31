@@ -1,0 +1,99 @@
+.notification {
+
+    &__heading {
+        width: 100%;
+        height: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(/img/common/information_bg_img.jpg);
+        position: relative;
+
+        @include media ("sp-s") {
+            height: 84px;
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(to bottom, #fff 70%, transparent);
+            background: -webkit-linear-gradient(top, transparent, #fff 70%);
+            background: -moz-linear-gradient(top, transparent, #fff 70%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            @include media ("sp-s") {
+                height: 90px;
+            }
+
+            @include media ("sp-s") {
+                bottom: -18px;
+            }
+        }
+
+        &-title {
+            position: absolute;
+            bottom:-10px;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+            color: $primary-color;
+            @include googleFont-Shippori;
+            font-size: 2rem;
+
+            @include media ("sp-l") {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__news {
+        @include contentsWidth(960px,"tb-s");
+        @include contentsMargin(0,90px);
+        @include contentsPadding(60px,90px,30px);
+
+        @include media ("sp-s") {
+            bottom: -18px;
+        }
+
+        &-lists {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &-list {
+            border-bottom: 1px solid $border-color;
+
+            a {
+                display: flex;
+                padding: 24px 8px;
+                @include menuArrow();
+            }
+        }
+
+        &-date {
+            margin-right: 24px;
+            line-height: 2;
+            color: $info-color;
+            font-size: $M-font-size;
+            @include flexbox;
+        }
+
+        &-title {
+            width: calc(100% - 10rem - 24px);
+            line-height: 2;
+            color: $secondary-color;
+            font-size: $base-font-size;
+            margin: 0;
+
+            @include media ("sp-s") {
+                font-size: $M-font-size;
+                width: calc(100% - 8rem - 24px);
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@ const { ProvidePlugin } = require('webpack');
 module.exports = ({ outputFile, assetFile }) => ({
   entry: {
     main: './src/js/main.js',
+    main: './src/js/top.js',
     // sub: './src/js/sub.js',
     secondStyle: './src/scss/main.scss',
     thirdStyle: './src/scss/example.scss',

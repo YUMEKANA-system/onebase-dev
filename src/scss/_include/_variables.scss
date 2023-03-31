@@ -4,15 +4,20 @@ $secondary-color: #595757;
 $success-color: #106f51;
 $danger-color: #c8161d;
 $info-color: #677e98;
+$info-bg-color: #f7f8f8;
 $theme-color: #ac984e;
+$theme-sub-color: #d7c09f;
 $themeLight-color: #f6f1ea;
+$border-color: #ddd;
+$borderLight-color: #eee;
 
 $next-btn-color: #79698a; // 進むボタンの色（青）
 $prev-btn-color: #b0a6bb; // 戻るボタンの色（灰）
-$submit-btn-color: #106f51; // 決定ボタンの色（緑）
+$submit-btn-color: #79698a; // 決定ボタンの色（緑）
 $cancel-btn-color: #b0a6bb; // キャンセルボタンの色（赤）
 $share-btn-color: #93bace; // シェアボタンの色（青）
 $login-btn-color: #93bace; // ログインボタンの色（青）
+$payment-btn-color: #106f51; // ログインボタンの色（青）
 
 //フォントサイズ
 $base-font-size: 16px;
@@ -21,25 +26,17 @@ $S-font-size: 12px;
 $SS-font-size: 10px;
 $h1-font-size: 2.5rem;
 $h2-font-size: 2rem;
-$h3-font-size: 1.75rem;
-$h4-font-size: 1.5rem;
+$h3-font-size: 1.5rem;
+$h4-font-size: 1.25rem;
 $p-font-size: 1rem;
 
 //幅
 $container-large-width: 1200px;
 $container-width: 960px;
-$content-large-width: 800px;
-$content-width: 600px;
+$content-width-L: 900px;
+$content-width-M: 800px;
+$content-width-S: 600px;
 $sidebar-width: 300px;
-
-$button-width: 100px;
-$button-height: 40px;
-
-$header-height: 80px;
-$footer-height: 60px;
-
-$thumbnail-width: 150px;
-$thumbnail-height: 100px;
 
 //マージン・パディング
 $base-margin: 1rem;
@@ -57,8 +54,6 @@ $border-radius-l:6px;
 $btn-height: 40px;
 
 
-
-
 $Width:(
     contents:1024px,
     sideArea:300px
@@ -66,8 +61,6 @@ $Width:(
 /*マップ
 width:map-get($width,contents);
 */
-
-
 
 $path:(
     img:"/img/"

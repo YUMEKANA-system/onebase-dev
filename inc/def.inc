@@ -17,7 +17,8 @@ $menu = array(
 	"/regist/index.php" => array("会員登録",""),
 	"/regist/comp.php" => array("仮登録完了",""),
 	"/rule/index.php" => array("利用規約",""),
-	"/rule/privacy.php" => array("プライバシーポリシー",""),
+	"/rule/affiliate.php" => array("利用規約(アフィリエイト)",""),
+	"/policy/index.php" => array("プライバシーポリシー",""),
 	"/test.php" => array("ウェブアクセラレータテスト","ウェブアクセラレータテスト"),
 	"/phpinfo.php" => array("",""),
 	"/contact/index.php" => array("お問い合わせ",""),
@@ -32,8 +33,8 @@ $menu = array(
 	"/course/index.php" => array("ムービーマーケット",""),
 	"/course/detail.php" => array("ムービーマーケット",""),
 	"/zoom.php" => array("zoom URL生成",""),
-	"/information/index.php" => array("総合案内",""),
-	"/information/detail.php" => array("総合案内の内容",""),
+	"/notification/index.php" => array("総合案内",""),
+	"/notification/detail.php" => array("総合案内の内容",""),
 
 	//neon
 	"/neon/index.php" => array("トップページ",""),

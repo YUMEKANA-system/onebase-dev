@@ -1,8 +1,29 @@
-@import 'variables';
-@import 'media';
-@import 'mixins';
+@import '_include/variables';
+@import '_include/media';
+@import '_include/mixins';
+@import '_include/default';
+@import '_include/sticky';
+#top {
+    @import 'top/index';
+}
 #login {
     @import 'login/index';
 }
+#reminder {
+    @import 'reminder/index';
+}
+#regist {
+    @import 'regist/index';
+}
+#notification {
+    @import 'notification/index';
+    @import 'notification/detail';
+}
+#guide {
+    @import 'guide/index';
+    @import 'guide/access';
+    @import 'guide/archive';
+    @import 'guide/detail';
+}
 
-@import 'util';
+@import '_include/util';

@@ -1,0 +1,183 @@
+.regist {
+    @include baseHeight(auto);
+    @include basePadding(60px,50px);
+
+    &__logo {
+        width:60px;
+        margin:0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 2;
+        margin: 0 auto;
+        color: $primary-color;
+    }
+
+    &__inputs {
+        @include contentsWidth(600px);
+        @include contentsHeight(auto);
+        @include contentsMargin(30px,60px);
+        @include contentsPadding(30px,50px,0);
+        @include boxShadow(#ac984e, .4);
+        @include backGroundColor(#fff, 1);
+        border-radius: $border-radius-l;
+
+        @include media ("sp-s") {
+            box-shadow:none
+          }
+
+        &-description {
+            font-size: $M-font-size;
+        }
+
+        &-info {
+            font-size: $S-font-size;
+            color: $info-color;
+            margin: 30px 0 5px;
+            font-weight: bold;
+        }
+
+        &-box {
+            @include flexbox(row, space-between, center);
+        }
+
+        &-name1,&-name2 {
+            @include input-text;
+            width: 48%;
+        }
+
+        &-mail1,&-mail2,&-intro {
+            @include input-text;
+        }
+
+        &-introducer {
+            font-size: $S-font-size;
+            color: $info-color;
+            margin: 30px 0 5px;
+            font-weight: bold;
+        }
+
+        span {
+            font-size: $SS-font-size;
+            color: $secondary-color;
+            text-align: left;
+            margin: 2px 0;
+            display: block;
+        }
+
+        &-checkbox {
+            text-align: left;
+            margin: 20px 0 10px;
+
+            input[type="checkbox"] {
+                position: relative;
+                top: 3px;
+            }
+
+            label {
+                font-size: 12px;
+                text-align: left;
+                margin: 20px 0 8px;
+                user-select: none;
+            }
+
+            p {
+                font-size: 12px;
+                text-align: left;
+                margin: 0;
+                user-select: none;
+                text-indent: 25px;
+
+                a {
+                    color:$info-color;
+                }
+            }
+        }
+
+        input[type="submit"] {
+            @include submit-button($submit-btn-color, #fff);
+            margin:40px auto;
+
+        }
+    }
+
+    &__confirm {
+        text-align: center;
+        margin:0 auto;
+    }
+
+    .disabled {
+        @include contentsWidth(600px);
+        @include contentsHeight(auto);
+        @include contentsMargin(30px,60px);
+        @include contentsPadding(30px,50px,0);
+        @include boxShadow(#ac984e, .4);
+        border-radius: $border-radius-l;
+
+        @include media ("sp-s") {
+            box-shadow:none
+          }
+    }
+
+    .btn-select-box {
+        margin:46px auto;
+
+        .btn-select-submit {
+            @include submit-button($submit-btn-color, #fff);
+            margin-bottom:20px;
+        }
+
+        .btn-select-prev {
+            @include submit-button($prev-btn-color, #fff);
+        }
+
+    }
+
+
+    &__welcome {
+    position: relative;
+    padding-top: 50px;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    line-height: 1.4;
+    text-align: center;
+    @include googleFont-Shippori;
+
+    &::before {
+        content: attr(data-en);
+        position: absolute;
+        transform: rotate(-5deg);
+        top: -100px;
+        left: -50;
+        right: 0;
+        color: #f7f0d9;
+        font-size: 200px;
+        font-family: 'Tangerine', cursive;
+        font-style: italic;
+        z-index: -1;
+
+        @include media ("sp-s") {
+            font-size: 140px;
+          }
+    }
+
+    &-info {
+        font-size: $M-font-size;
+        color: $primary-color;
+        text-align: center;
+        margin: 0 0 40px;
+    }
+
+    &-info-sub {
+        font-size: $S-font-size;
+        color: $danger-color;
+        text-align: center;
+    }
+
+}
+
+
+}

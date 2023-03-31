@@ -1,0 +1,155 @@
+.archive {
+    @include contentsMargin(0,90px);
+
+
+    @include media ("sp-l") {
+        margin-bottom: 30px;
+    }
+
+    &__heading {
+        width: 100%;
+        height: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(/img/common/kv-guide.png);
+        position: relative;
+
+        @include media ("sp-s") {
+            height: 84px;
+        }
+
+        &-title {
+            position: absolute;
+            bottom:-10px;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+            color: $primary-color;
+            @include googleFont-Shippori;
+            font-size: 2rem;
+
+            @include media ("sp-l") {
+                font-size: 1.5rem;
+            }
+
+            @include media ("sp-s") {
+                bottom: -18px;
+            }
+        }
+    }
+
+    &__items {
+        @include contentsMargin(60px,0);
+        @include flexbox(row, space-between, initial);
+        flex-wrap: wrap;
+        width: 1150px;
+        padding:20px 0;
+
+        @include media ("tb-l") {
+        width: 960px;
+        }
+
+        @include media ("tb-s") {
+        width: 100%;
+        padding: 0 4% 30px;
+        }
+
+        @include media ("sp-l") {
+        padding: 0 2% 30px;
+        margin-top:40px;
+        }
+    }
+
+    &__item {
+        width: 32%;
+        margin-bottom: 24px;
+
+        @include media ("sp-l") {
+        width: 49%;
+        }
+
+        @include media ("sp-s") {
+        width: 100%;
+        }
+
+        &-title {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 18px;
+            margin: 0;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            border: solid 1px $theme-sub-color;
+            border-bottom:none;
+            background-color: $themeLight-color;
+        }
+
+        &-lists {
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+            border: solid 1px $theme-sub-color;
+
+        }
+
+        &-list {
+            border-bottom: 1px solid $border-color;
+            @include menuArrow();
+
+            a {
+                margin: 0;
+                font-size: $p-font-size;
+                display: block;
+                @include ellipsis;
+                padding:20px;
+                padding-right:40px;
+
+                @include media ("sp-s") {
+                    padding: 18px 4%;
+                    padding-right:36px;
+                }
+            }
+        }
+
+        &-list:last-child {
+            border:none;
+        }
+
+        &-comingSoon {
+            margin: 0;
+            font-size: 16px;
+            color: #aaa;
+            display: block;
+            @include ellipsis;
+            padding:20px;
+            padding-right:40px;
+            border: solid 1px $theme-sub-color;
+            text-align: left;
+
+            @include media ("sp-s") {
+                padding: 18px 4%;
+                padding-right:36px;
+            }
+        }
+    }
+
+    &__contact {
+        width: 100%;
+        @include contentsMargin(30px,0);
+        @include contentsPadding(0,20px,0);
+
+        &-title {
+            width: 100%;
+            text-align: center;
+            color: $primary-color;
+            font-size: 1rem;
+        }
+
+        &-btn {
+            @include submit-button($login-btn-color, #fff);
+            margin-top:25px;
+        }
+    }
+}

@@ -8,8 +8,8 @@
     "start": "npx webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "build:dev": "npm run lint && webpack --config webpack.dev.js",
-    "gulp:dev": "gulp",
-    "gulp:build": "gulp build"
+    "gulp:start": "gulp",
+    "gulp": "gulp build"
   },
     "repository": {
     "type": "git",

@@ -41,7 +41,7 @@
                     </li>
                     <li><span class="material-symbols-outlined md-light">info</span>
                         <ul>
-                            <li><a href="/information/">総合案内</a></li>
+                            <li><a href="/notification/">総合案内</a></li>
                             <li><a href="/guide/archive.php">ご利用ガイド</a></li>
                             <li><a href="/guide/access.php">アクセス方法</a></li>
                             <li><a href="/contact/">お問い合わせ</a></li>
@@ -131,7 +131,7 @@
                             </li>
                             <li><span>総合案内 <i class="fas fa-caret-down"></i></span>
                                 <ol>
-                                    <li><a href="/information/">総合案内</a></li>
+                                    <li><a href="/notification/">総合案内</a></li>
                                     <li><a href="/guide/archive.php">ご利用ガイド</a></li>
                                     <li><a href="/guide/access.php">アクセス方法</a></li>
                                     <li><a href="/contact/">お問い合わせ</a></li>

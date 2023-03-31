@@ -7,7 +7,7 @@
       "@scss": ["scss"],
       "scss": ["scss"],
       "js": ["js"],
-      "img": ["img"]
+      "img": ["img/common"]
     }
   }
 }

@@ -1,0 +1,238 @@
+.stickyStyle {
+    width: 100%;
+
+    &__inner {
+        width: $container-large-width;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0 20px;
+
+        @include media ("tb-l") {
+            width: 100%;
+        }
+
+        &-left {
+            position: sticky;
+            top: 115px;
+            width: $sidebar-width;
+            height: 760px;
+
+            @include media ("tb-l") {
+                display: none;
+            }
+
+            .left-pankuzuList {
+                margin: 0 auto 20px;
+                padding:0 25px;
+
+                span {
+                    color:$secondary-color;
+                    position: relative;
+                    margin-right: 35px;
+                    font-size: $S-font-size;
+
+                    &:first-of-type::before {
+                        content: "";
+                        right: -30px;
+                        position: absolute;
+                        display: inline-block;
+                        width: 6px;
+                        height: 6px;
+                        border-top: 1px solid $secondary-color;
+                        border-right: 1px solid $secondary-color;
+                        transform: rotate(45deg);
+                        margin: 5px 0.8rem 2px;
+                        flex-shrink: 0;
+                    }
+                }
+
+                span:last-of-type {
+                    margin:0;
+                }
+            }
+
+            .left-inner {
+                width: $sidebar-width;
+                height: auto;
+
+                ul {
+                    margin:0;
+
+                    li {
+                        border-bottom: solid 1px $border-color;
+                        background-color: #fff;
+                        list-style: none;
+
+
+                        a {
+                            padding: 15px 25px;
+                            font-size: $M-font-size;
+                            @include menuArrow();
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+
+                .--active {
+                    background-color: $themeLight-color;
+                }
+            }
+        }
+
+        &-right {
+            width: $content-width-L;
+            height: auto;
+            min-height: 800px;
+            padding: 30px 4%;
+            background-color: #fff;
+
+            @include media ("tb-l") {
+                width: $container-width;
+                margin:0 auto;
+
+                .smp-menu {
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 15px;
+                        right: 15px;
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        border-top: 1px solid $secondary-color;
+                        border-right: 1px solid $secondary-color;
+                        transform: rotate(135deg);
+                        margin: 2px;
+                        z-index: 1;
+                    }
+
+                    select {
+                        background: #fff;
+                        background-image: none;
+                        border: 1px solid $theme-color;
+                        box-shadow: none;
+                        appearance: none;
+                        width: 100%;
+                        height: $btn-height + 6px;
+                        line-height:$btn-height + 6px;
+                        padding: 0 30px 0 10px;
+                        position: relative;
+                        cursor: pointer;
+                        text-overflow: ellipsis;
+                        outline: none;
+                        font-size: $M-font-size;
+                        border-radius: $border-radius-s;
+                    }
+                }
+            }
+
+            @include media ("tb-s") {
+                width: 100%;
+                padding-bottom:0;
+            }
+
+            .right-inner {
+                width: $content-width-M;
+                margin: 0 auto;
+                padding: 0;
+
+                @include media ("tb-l") {
+                    width: 100%;
+                }
+
+                h1 {
+                    border-bottom: 1px solid $border-color;
+                    @include h-font-size(1.75rem,1.5rem,70px,50px);
+                }
+
+                h2 {
+                    @include h-font-size(1.5rem,1.2rem,70px,40px);
+                    text-indent: 20px;
+                    position: relative;
+                    margin:24px 0 20px;
+
+                    @include media ("sp-s") {
+                        text-indent: 0;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom:0;
+                        left: 0;
+                        margin:auto;
+                        width: 4px;
+                        height: 30px;
+                        background-color: $theme-color;
+                    }
+                }
+
+                li {
+                    color:$secondary-color;
+                    line-height:1.8;
+                }
+
+                table {
+                    @include table-style(200px,#fff);
+                }
+
+                h3 {
+                    @include h-font-size(1.2rem,1.2rem,auto,auto);
+                    margin:10px auto;
+                }
+
+                .contact-info {
+                    font-size: $M-font-size;
+                    text-align: left;
+                    margin-top: 15px;
+                    margin-bottom:30px;
+                    padding-left: 2%;
+                }
+
+                .contact-form {
+                    @include table-style(200px,$info-bg-color,0);
+
+                    @include media ("sp-s") {
+                        tr:nth-child(odd) th, tr:nth-child(odd) td {
+                            background-color: #fff;
+                        }
+                    }
+
+                    input[type="text"] {
+                        @include input-text;
+                    }
+
+                    textarea {
+                        @include input-textarea;
+                    }
+                }
+
+                input[type="button"],input[type="submit"] {
+                    @include submit-button($next-btn-color, #fff);
+                }
+
+                .prev-submit-btn {
+                    @include submit-button($prev-btn-color, #fff);
+                    display: block;
+                    margin:0 auto 60px;
+                }
+
+                .top-submit-btn {
+                    @include submit-button($primary-color, #fff);
+                    display: block;
+                    margin:40px auto 60px;
+                }
+            }
+        }
+    }
+}
